@@ -1,0 +1,33 @@
+.bubble {
+    margin: auto;
+    max-width: 360pt;
+    text-align: center;
+    border-style: solid;
+    border-width: 2pt;
+    border-radius: 6pt;
+}
+.color1 {
+    background-color: #DDDDDD;
+    border-color: gray;
+}
+.color2 {
+    color: #FFDBBB;
+    border-color: orange;
+}
+
+.color3 {
+    background-color: lightgreen;
+    border-color: green;
+}
+
+.color4 {
+    color: red;
+    background-color: #DDDDDD;
+}
+.color5 {
+    color: red;
+    background-color: orange;
+}
+.backgroundColor {
+    background-color: lightblue;
+}
