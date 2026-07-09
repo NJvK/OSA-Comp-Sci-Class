@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(67, 67, 246);
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8&auto=format&fit=crop&w=500&q=60");
+}
+h1 {
+    color: rgb(196, 234, 246);
+    text-align: center;
+}
+
+.cat {
+    border-radius: 39%;
+}
+
+.img {
+    align-content: center;
+}
+
+.moving {
+    position: relative;
+    animation: moveLeftRight 2s infinite alternate;
+}
+
+@keyframes moveLeftRight {
+    from {
+        left : 0px;
+    } to {
+        left : 500px;
+    }
+}
