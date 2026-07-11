@@ -1,0 +1,316 @@
+<!-- <head>
+    <link href='Style.css' rel='stylesheet'>
+
+    <script>
+        // none to start
+    </script>
+</head>
+
+<body>
+    <div class="title">
+        <h1> name goes here </h1>
+    </div>
+
+    <div>
+        <img src ="" class="img"width = "220px">
+        <p class="name"> name goes here </p>
+        <p class="discription"> text goes here </p>
+    </div>
+
+    
+
+
+</body> -->
+<!--
+    AI!!!!!!
+-->
+<!-- <head>
+    <link href="Style.css" rel="stylesheet">
+
+    <script>
+        // none to start
+    </script>
+</head> -->
+
+<!-- <body>
+
+    <div class="title">
+        <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/ChatGPT Image Jul 10, 2026, 03_40_23 PM.png" class="img" width="220px">
+    </div> -->
+
+    <!-- filters -->
+    <!-- <div class="filters">
+
+        <div class="filter">
+            <label for="watchType">Watch Type</label>
+
+            <select id="watchType">
+                <option value="all">All Watches</option>
+                <option value="dress">Dress</option>
+                <option value="diver">Diver</option>
+                <option value="field">Field</option>
+                <option value="pilot">Pilot</option>
+                <option value="chronograph">Chronograph</option>
+            </select>
+        </div>
+
+
+        <div class="filter">
+            <label for="material">Case Material</label>
+
+            <select id="material">
+                <option value="all">All Materials</option>
+                <option value="steel">Stainless Steel</option>
+                <option value="titanium">Titanium</option>
+                <option value="gold">Gold</option>
+                <option value="ceramic">Ceramic</option>
+                <option value="carbon">Carbon Fibre</option>
+            </select>
+        </div>
+
+
+        <div class="filter">
+            <label for="strap">Strap Material</label>
+
+            <select id="strap">
+                <option value="all">All Straps</option>
+                <option value="leather">Leather</option>
+                <option value="steel">Steel Bracelet</option>
+                <option value="rubber">Rubber</option>
+                <option value="fabric">Fabric</option>
+            </select>
+        </div>
+
+
+        <div class="filter">
+            <label for="movement">Movement</label>
+
+            <select id="movement">
+                <option value="all">All Movements</option>
+                <option value="automatic">Automatic</option>
+                <option value="mechanical">Mechanical</option>
+                <option value="quartz">Quartz</option>
+                <option value="solar">Solar</option>
+            </select>
+        </div>
+
+
+        <div class="filter">
+            <label for="price">Price</label>
+
+            <select id="price">
+                <option value="all">Any Price</option>
+                <option value="under250">Under $250</option>
+                <option value="250-500">$250 - $500</option>
+                <option value="500-1000">$500 - $1,000</option>
+                <option value="1000-5000">$1,000 - $5,000</option>
+                <option value="over5000">$5,000+</option>
+            </select>
+        </div>
+
+    </div> -->
+
+
+    <!-- <div class="watchGrid">
+
+        <div class="watch">
+            <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/christian-klings-escapement-mosquito-1.jpg" class="img">
+            <p class="name"><a href="https://www.christianklings.com/timepieces/escapement-mosquito/" target="Watch One">Escapement Mosquito</a></p>
+            <p class="description">Shock-resistant escapement with innovative pivoted detent</p>
+        </div> -->
+
+        <!-- filters -->
+
+        <!-- <div class="watch">
+            <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/christian-klings-timepiece-no02-1.jpg" class="img">
+            <p class="name"><a href="https://www.christianklings.com/timepieces/no-02/" target="Watch Three">No. 02</a></p>
+            <p class="description">Special blue silk dial, guilloche subdial, and rose gold details</p>
+        </div>
+
+
+        <div class="watch">
+            <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/christian-klings-timepiece-no06-1.jpg" class="img">
+            <p class="name"><a href="https://www.christianklings.com/timepieces/no-06/" target="Watch Two">No. 06</a></p>
+            <p class="description">Unique visible power reserve with hand-engraved details</p>
+        </div>
+
+
+        <div class="watch">
+            <img src="" class="img">
+            <p class="name"><a href="" target="Watch Four"></a></p>
+            <p class="description">Text goes here</p>
+        </div>
+
+
+        <div class="watch">
+            <img src="" class="img">
+            <p class="name"><a href="" target="Watch Five">Watch Five</a></p>
+            <p class="description">Text goes here</p>
+        </div>
+
+
+        <div class="watch">
+            <img src="" class="img">
+            <p class="name"><a href="" target="Watch Six">Watch Six</a></p>
+            <p class="description">Text goes here</p>
+        </div>
+
+    </div>
+
+</body> -->
+
+<head>
+    <link href="Style.css" rel="stylesheet">
+
+    <script>
+        function filterWatches() {
+            let material = document.getElementById("material").value;
+            let size = document.getElementById("size").value;
+            let dial = document.getElementById("dial").value;
+            let feature = document.getElementById("feature").value;
+    
+            let watches = document.getElementsByClassName("watch");
+    
+            for (let i = 0; i < watches.length; i++) {
+                let watch = watches[i];
+    
+                let materialWorks = material == "all" || watch.dataset.material == material;
+    
+                let sizeWorks =
+                    size == "all" ||
+                    watch.dataset.size == size;
+    
+                let dialWorks =
+                    dial == "all" ||
+                    watch.dataset.dial == dial;
+    
+                let featureWorks =
+                    feature == "all" ||
+                    watch.dataset.feature.includes(feature);
+    
+    
+                if (materialWorks &&
+                    sizeWorks &&
+                    dialWorks &&
+                    featureWorks) {
+    
+                    watch.style.display = "block";
+    
+                } else {
+                    watch.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="title">
+        <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/ChatGPT Image Jul 10, 2026, 03_40_23 PM.png" class="img" width="220px">
+    </div>
+
+    <div class="img2">
+
+        <a href="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/idk.png"><img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/download.png" class="img2" width="220px"></a>
+    
+    </div>
+
+    <!-- about section -->
+
+    <div class="about">
+        <h2>About the Watch Maker</h2>
+
+        <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/image.png" class="img" width="100px">
+
+        <p>
+            Christian Klings is a renowned watchmaker known for his innovative designs and exceptional craftsmanship. With a passion for horology, he has created a collection of timepieces that blend traditional techniques with modern aesthetics. Each watch is meticulously crafted, ensuring precision and durability, making them highly sought after by collectors and enthusiasts alike.
+        </p>
+    </div>
+
+
+   <!-- filters -->
+
+<div class="filters">
+
+    <div class="filter">
+        <label for="material">Case Material</label>
+
+        <select id="material" onchange="filterWatches()">
+            <option value="all">All Materials</option>
+            <option value="steel">Stainless Steel</option>
+            <option value="two-tone">Steel & Rose Gold</option>
+            <option value="yellow-gold">18k Yellow Gold</option>
+        </select>
+    </div>
+
+
+    <div class="filter">
+        <label for="size">Case Size</label>
+
+        <select id="size" onchange="filterWatches()">
+            <option value="all">All Sizes</option>
+            <option value="37">37mm</option>
+            <option value="38">38mm</option>
+            <option value="42">42mm</option>
+        </select>
+    </div>
+
+
+    <div class="filter">
+        <label for="dial">Dial Color</label>
+
+        <select id="dial" onchange="filterWatches()">
+            <option value="all">All Dial Colors</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+        </select>
+    </div>
+
+
+    <div class="filter">
+        <label for="feature">Special Feature</label>
+
+        <select id="feature" onchange="filterWatches()">
+            <option value="all">All Features</option>
+            <option value="pivoted-detent">Pivoted Detent</option>
+            <option value="tourbillon">Tourbillon</option>
+            <option value="silk-dial">Silk Dial</option>
+            <option value="power-reserve">Visible Power Reserve</option>
+        </select>
+    </div>
+
+</div>
+
+
+    <div class="watchGrid">
+
+        <div class="watch" data-material="steel" data-size="42" data-dial="light" data-feature="pivoted-detent tourbillon">
+
+            <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/christian-klings-escapement-mosquito-1.jpg" class="img">
+
+            <p class="name"><a href="https://www.christianklings.com/timepieces/escapement-mosquito/" target="Watch One">Escapement Mosquito</a></p>
+
+            <p class="description">Shock-resistant escapement with innovative pivoted detent</p>
+        </div>
+
+
+        <div class="watch" data-material="two-tone" data-size="37" data-dial="dark" data-feature="silk-dial">
+    
+            <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/christian-klings-timepiece-no02-1.jpg" class="img">
+    
+            <p class="name"><a href="https://www.christianklings.com/timepieces/no-02/" target="Watch Three">No. 02</a></p>
+            
+            <p class="description">Special blue silk dial, guilloche subdial, and rose gold details</p>
+    </div>
+        <div class="watch"data-type="dress" data-material="light" data-strap="leather" data-movement="mechanical" data-price="over5000">
+
+            <img src="/Users/Natalie/Documents/GitHub/OSA Coding Class/Business/christian-klings-timepiece-no06-1.jpg" class="img">
+
+            <p class="name"><a href="https://www.christianklings.com/timepieces/no-06/" target="Watch Two">No. 06</a></p>
+
+            <p class="description">Unique visible power reserve with hand-engraved details</p>
+        </div>
+    </div>
+
+</body>

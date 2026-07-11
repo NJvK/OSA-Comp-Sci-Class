@@ -1,0 +1,22 @@
+body {
+    background-color: #fdcca1;
+}
+
+.title {
+    background-color: #ffeaa7;
+    border-radius: 999px;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
